@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.Android.Crashlytics.Binding</id>
+    <version>1.0.2.1006</version>
+    <authors>Crashlytics</authors>
+    <owners>Jared Kells</owners>
+    <licenseUrl>https://crashlytics.com</licenseUrl>
+    <projectUrl>https://crashlytics.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Xamarin Android bindings for Crashlytics</description>
+    <copyright>Copyright 2013</copyright>
+    <tags>android</tags>
+  </metadata>
+  <files>
+    <file src="Xamarin.Android.Crashlytics.Binding\bin\Release\Xamarin.Android.Crashlytics.dll" target="lib\MonoAndroid" />
+    <file src="Xamarin.Android.Crashlytics.Binding\bin\Release\Xamarin.Android.Crashlytics.pdb" target="lib\MonoAndroid" />
+    <file src="AntPlugin\crashlytics_build.xml" target="support" />
+    <file src="AntPlugin\crashlytics_build_base.xml" target="support" />
+  </files>
+</package>

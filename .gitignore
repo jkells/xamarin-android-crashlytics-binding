@@ -1,0 +1,9 @@
+AntPlugin/
+META-INF/
+bin
+obj
+*.class
+*.user
+*.suo
+*.nupkg
+crashlytics.zip
