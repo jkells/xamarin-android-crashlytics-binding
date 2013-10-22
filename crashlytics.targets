@@ -17,15 +17,15 @@
 	</PropertyGroup>
     
     <Target Name="CrashlyticsCleanUp">
-        <Exec Command="java -jar $(SolutionDir)\packages\Xamarin.Android.Crashlytics.Binding.1.0.2.1004\support\crashlytics-devtools.jar -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidRes $(MSBuildProjectDirectory)\Resources -projectPath $(MSBuildProjectDirectory) -cleanupResourceFile" />
+        <Exec Command="java -jar $(SolutionDir)\packages\Xamarin.Android.Crashlytics.Binding.1.1.1.1\support\crashlytics-devtools.jar -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidRes $(MSBuildProjectDirectory)\Resources -projectPath $(MSBuildProjectDirectory) -cleanupResourceFile" />
     </Target>	
 	
 	<Target Name="CrashlyticsUploadDeobs">
-        <Exec Command="java -jar $(SolutionDir)\packages\Xamarin.Android.Crashlytics.Binding.1.0.2.1004\support\crashlytics-devtools.jar -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidRes $(MSBuildProjectDirectory)\Resources -projectPath $(MSBuildProjectDirectory) -uploadDeobs" />
+        <Exec Command="java -jar $(SolutionDir)\packages\Xamarin.Android.Crashlytics.Binding.1.1.1.1\support\crashlytics-devtools.jar -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidRes $(MSBuildProjectDirectory)\Resources -projectPath $(MSBuildProjectDirectory) -uploadDeobs" />
     </Target>	
 	
 	<Target Name="CrashlyticsGenerateResourceFile">
-        <Exec Command="java -jar $(SolutionDir)\packages\Xamarin.Android.Crashlytics.Binding.1.0.2.1004\support\crashlytics-devtools.jar -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidRes $(MSBuildProjectDirectory)\Resources -projectPath $(MSBuildProjectDirectory) -generateResourceFile" />
+        <Exec Command="java -jar $(SolutionDir)\packages\Xamarin.Android.Crashlytics.Binding.1.1.1.1\support\crashlytics-devtools.jar -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidRes $(MSBuildProjectDirectory)\Resources -projectPath $(MSBuildProjectDirectory) -generateResourceFile" />
     </Target>	
 	
 	<Target Name="CrashlyticsStoreDeobs">

@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Xamarin.Android.Crashlytics.Binding</id>
-    <version>1.0.2.1006</version>
+    <version>1.1.1.1</version>
     <authors>Crashlytics</authors>
     <owners>Jared Kells</owners>
     <licenseUrl>https://crashlytics.com</licenseUrl>
