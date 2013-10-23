@@ -2,6 +2,7 @@
 using Android.App;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Android.Crashlytics.Binding.Additions;
 
 namespace Xamarin.Android.Crashlytics.Sample
 {
@@ -10,6 +11,8 @@ namespace Xamarin.Android.Crashlytics.Sample
     {
         protected override void OnCreate(Bundle bundle)
         {
+            CrashReporting.StartWithMonoHook(this, true);
+
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
             var button1 = FindViewById<Button>(Resource.Id.Crash1);

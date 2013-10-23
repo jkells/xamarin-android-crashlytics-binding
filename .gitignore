@@ -8,3 +8,4 @@ obj
 *.suo
 *.nupkg
 crashlytics.zip
+com_crashlytics_export_strings.xml
