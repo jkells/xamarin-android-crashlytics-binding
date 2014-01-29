@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
-        <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$(MSBuildProjectDirectory)\..\</SolutionDir>                
-
-		<JarPath Condition="Exists('$(SolutionDir)\\packages')">$(SolutionDir)\packages\Xamarin.Android.Crashlytics.Binding.1.1.1.1\support\crashlytics-devtools.jar</JarPath>
-		<JarPath Condition="Exists('$(MSBuildProjectDirectory)\\packages')">$(MSBuildProjectDirectory)\packages\Xamarin.Android.Crashlytics.Binding.1.1.1.1\support\crashlytics-devtools.jar</JarPath>
-    </PropertyGroup>
-
-	
-	
-	<PropertyGroup Condition="'$(AndroidApplication)' != '' And $(AndroidApplication)">
-		<BuildDependsOn>
+  <PropertyGroup>
+    <CrashlyticsVersion>1.1.1.1</CrashlyticsVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$(MSBuildProjectDirectory)\..\</SolutionDir>
+    <JarPath Condition="Exists('$(SolutionDir)\\packages')">$(SolutionDir)\packages\Xamarin.Android.Crashlytics.Binding.$(CrashlyticsVersion)\support\crashlytics-devtools.jar</JarPath>
+    <JarPath Condition="Exists('$(MSBuildProjectDirectory)\\packages')">$(MSBuildProjectDirectory)\packages\Xamarin.Android.Crashlytics.Binding.$(CrashlyticsVersion)\support\crashlytics-devtools.jar</JarPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(AndroidApplication)' != '' And $(AndroidApplication)">
+    <BuildDependsOn>
 		CrashlyticsCleanUp;
 		CrashlyticsUploadDeobs;
 		CrashlyticsGenerateResourceFile;		
@@ -19,20 +16,16 @@
 		CrashlyticsUploadDeobs;
 		CrashlyticsCleanUp;				
 	  </BuildDependsOn>
-	</PropertyGroup>
-    
-    <Target Name="CrashlyticsCleanUp">
-        <Exec Command="java -jar $(JarPath) -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidRes $(MSBuildProjectDirectory)\Resources -projectPath $(MSBuildProjectDirectory) -cleanupResourceFile" />
-    </Target>	
-	
-	<Target Name="CrashlyticsUploadDeobs">
-        <Exec Command="java -jar $(JarPath) -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidRes $(MSBuildProjectDirectory)\Resources -projectPath $(MSBuildProjectDirectory) -uploadDeobs" />
-    </Target>	
-	
-	<Target Name="CrashlyticsGenerateResourceFile">
-        <Exec Command="java -jar $(JarPath) -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidRes $(MSBuildProjectDirectory)\Resources -projectPath $(MSBuildProjectDirectory) -generateResourceFile" />
-    </Target>	
-	
-	<Target Name="CrashlyticsStoreDeobs">
-	</Target>
+  </PropertyGroup>
+  <Target Name="CrashlyticsCleanUp">
+    <Exec Command="java -jar $(JarPath) -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidRes $(MSBuildProjectDirectory)\Resources -projectPath $(MSBuildProjectDirectory) -cleanupResourceFile" />
+  </Target>
+  <Target Name="CrashlyticsUploadDeobs">
+    <Exec Command="java -jar $(JarPath) -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidRes $(MSBuildProjectDirectory)\Resources -projectPath $(MSBuildProjectDirectory) -uploadDeobs" />
+  </Target>
+  <Target Name="CrashlyticsGenerateResourceFile">
+    <Exec Command="java -jar $(JarPath) -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidRes $(MSBuildProjectDirectory)\Resources -projectPath $(MSBuildProjectDirectory) -generateResourceFile" />
+  </Target>
+  <Target Name="CrashlyticsStoreDeobs">
+  </Target>
 </Project>
