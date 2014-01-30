@@ -9,6 +9,12 @@ public class MonoException extends Exception{
         this.stack = stack;
     }
 
+    public MonoException(String message, StackTraceElement[] stack, Throwable cause){
+	super(cause);
+        this.message = message;
+        this.stack = stack;
+    }
+
     @Override
     public StackTraceElement[] getStackTrace() {
         return stack;

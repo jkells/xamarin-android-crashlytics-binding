@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <CrashlyticsVersion>1.1.1.1</CrashlyticsVersion>
+    <CrashlyticsVersion>1.1.1.2</CrashlyticsVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$(MSBuildProjectDirectory)\..\</SolutionDir>
     <JarPath Condition="Exists('$(SolutionDir)\\packages')">$(SolutionDir)\packages\Xamarin.Android.Crashlytics.Binding.$(CrashlyticsVersion)\support\crashlytics-devtools.jar</JarPath>
     <JarPath Condition="Exists('$(MSBuildProjectDirectory)\\packages')">$(MSBuildProjectDirectory)\packages\Xamarin.Android.Crashlytics.Binding.$(CrashlyticsVersion)\support\crashlytics-devtools.jar</JarPath>

@@ -4,7 +4,7 @@ using Android.Runtime;
 using Java.Lang;
 
 using JavaException = Java.Lang.Exception;
-
+// ReSharper disable once CheckNamespace
 namespace Xamarin.Android.Crashlytics.Binding.Additions
 {
     public class CrashReporting

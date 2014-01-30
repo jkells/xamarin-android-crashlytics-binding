@@ -7,10 +7,20 @@
         android:id="@+id/Crash1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Crash 1" />
+        android:text="Crash .NET" />
     <Button
         android:id="@+id/Crash2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Crash 2" />
+        android:text="Crash Java" />
+    <Button
+        android:id="@+id/Crash3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Crash with inner exceptions" />
+    <Button
+        android:id="@+id/Crash4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Crash Async AWAIT" />
 </LinearLayout>
