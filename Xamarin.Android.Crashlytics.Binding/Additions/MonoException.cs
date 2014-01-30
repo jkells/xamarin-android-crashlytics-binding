@@ -64,7 +64,6 @@ namespace Xamarin.Android.Crashlytics.Binding
 
                 foreach (var line in lines)
                 {
-                    Log.Error("JARED", line);
                     var match = ExpressionWithLineNumbers.Match(line);
                     if (match.Success)
                         yield return StackTraceElementWithLineNumbers(match);
@@ -81,14 +80,12 @@ namespace Xamarin.Android.Crashlytics.Binding
         }
 
         private static StackTraceElement StackTraceElement(string line)
-        {
-            Log.Error("JARED", "StackTraceElement");
+        {         
             return new StackTraceElement(line, "", "unknown.cs", 1);
         }
 
         private static StackTraceElement StackTraceElementWithLineNumbers(Match match)
-        {
-            Log.Error("JARED", "StackTraceElementWithLineNumbers");
+        {            
             var lineNumber = int.Parse(match.Groups["LineNumber"].Value);
 
             if (lineNumber != 0)
@@ -103,7 +100,6 @@ namespace Xamarin.Android.Crashlytics.Binding
 
         private static StackTraceElement StackTraceElementWithoutLineNumbers(Match match)
         {
-            Log.Error("JARED", "StackTraceElementWithoutLineNumbers");
             var method = match.Groups["MethodName"].Value + match.Groups["MethodArguments"].Value +
                          match.Groups["Offset"].Value;
 
