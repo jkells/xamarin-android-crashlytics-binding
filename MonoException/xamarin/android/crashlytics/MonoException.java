@@ -1,4 +1,4 @@
-package xamarin.android.crashlytics.binding;
+package xamarin.android.crashlytics;
 
 public class MonoException extends Exception{
     private final String message;

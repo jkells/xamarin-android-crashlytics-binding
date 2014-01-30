@@ -7,7 +7,7 @@ using Exception = System.Exception;
 
 // ReSharper disable once CheckNamespace
 
-namespace Xamarin.Android.Crashlytics.Binding
+namespace Xamarin.Android.Crashlytics
 {
     public partial class MonoException
     {

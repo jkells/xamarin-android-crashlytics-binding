@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Android.App;
 using Android.OS;
 using Android.Widget;
-using Xamarin.Android.Crashlytics.Binding.Additions;
 
 namespace Xamarin.Android.Crashlytics.Sample
 {
@@ -13,8 +12,10 @@ namespace Xamarin.Android.Crashlytics.Sample
         protected override void OnCreate(Bundle bundle)
         {
             CrashReporting.StartWithMonoHook(this, true);
+            Crashlytics.SetString("BUILDNUMBER", "1.0.0.0");
 
             base.OnCreate(bundle);
+
             SetContentView(Resource.Layout.Main);
             var button1 = FindViewById<Button>(Resource.Id.Crash1);
             var button2 = FindViewById<Button>(Resource.Id.Crash2);
