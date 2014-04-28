@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Xamarin.Android.Crashlytics.Binding</id>
-    <version>1.1.11</version>
+    <version>1.1.11.1</version>
     <authors>Crashlytics</authors>
     <owners>Jared Kells</owners>
     <licenseUrl>https://crashlytics.com</licenseUrl>
@@ -13,11 +13,11 @@
     <tags>android</tags>
   </metadata>
   <files>
-    <file src="crashlytics.targets" target="support" />
+    <file src="Xamarin.Android.Crashlytics.Binding.targets" target="build" />
     <file src="Xamarin.Android.Crashlytics.Binding\bin\Release\Xamarin.Android.Crashlytics.dll" target="lib\MonoAndroid" />
     <file src="Xamarin.Android.Crashlytics.Binding\bin\Release\Xamarin.Android.Crashlytics.pdb" target="lib\MonoAndroid" />
-    <file src="AntPlugin\crashlytics_build.xml" target="support" />
-    <file src="AntPlugin\crashlytics_build_base.xml" target="support" />
-    <file src="AntPlugin\crashlytics-devtools.jar" target="support" />
+    <file src="AntPlugin\crashlytics_build.xml" target="build" />
+    <file src="AntPlugin\crashlytics_build_base.xml" target="build" />
+    <file src="AntPlugin\crashlytics-devtools.jar" target="build" />
   </files>
 </package>
