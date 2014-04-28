@@ -50,5 +50,15 @@ It is generated automatically during the build
 * Build the binding project by running psake.cmd
 * Update the AndroidManifest.xml file in the sample project with your API key and package name.
 
+## Updating this binding to use the latest version of the library.
+
+* Run psake Latest-Version to find out the latest version number.
+* Update default.ps1, set $version to the latest version.
+* Run psake Update-Version
+* Run psake clean to delete the local copies of crashlytics*.jar
+* Run psake
+* Fix any mapping errors due to obfuscated class names changing
+
 ## Links ##
+
 * [https://www.crashlytics.com/](https://www.crashlytics.com/)
