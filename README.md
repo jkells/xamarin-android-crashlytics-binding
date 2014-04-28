@@ -11,20 +11,8 @@ This project provides bindings for the Crashlytics library. You need to set your
 * **Build the project by running psake.cmd**
 * **Install the nuget package into your project**
 
-Either from the command line run:
-`nuget.exe install -Source <PackageDirectory> Xamarin.Android.Crashlytics.Binding`
-
-Or alternativly you can add the directory containing the nupkg file to your sources in Visual Studio under *Tools -> Options -> Package Manager -> Sources* and then install the package using the Visual Studio GUI
-
-* **Add the crashlytics targets to your project file**
-
-Place the following line:
-
-`<Import Project="packages\Xamarin.Android.Crashlytics.Binding.1.1.1.1\support\crashlytics.targets" />`
-
-Immediately after this line
-
-`<Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />`
+You can add the directory containing the nupkg file to your sources in Visual Studio under *Tools -> Options -> Package Manager -> Sources* and then install the package using the Visual Studio GUI
+Adding the package from the command line is not recommended because the targets file won't be added to your csproj file.
 
 * **Add your Crashlytics API Key**
 
