@@ -1,5 +1,6 @@
 <metadata>
   <attr path="/api/package[@name='com.crashlytics.android']" name="managedName">Xamarin.Android.Crashlytics</attr>
+  <attr path="/api/package[@name='com.crashlytics.android.internal']" name="managedName">Xamarin.Android.Crashlytics.Internal</attr>
   
   <!-- Should be fun updating these obscured types every release. -->
   <remove-node path="/api/package[@name='com.crashlytics.android.internal']/class[@name='aM']"/> 
