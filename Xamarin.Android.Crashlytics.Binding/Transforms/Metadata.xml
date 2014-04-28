@@ -1,3 +1,8 @@
 <metadata>
   <attr path="/api/package[@name='com.crashlytics.android']" name="managedName">Xamarin.Android.Crashlytics</attr>
+  
+  <!-- Should be fun updating these obscured types every release. -->
+  <remove-node path="/api/package[@name='com.crashlytics.android.internal']/class[@name='aM']"/> 
+  <attr path="/api/package[@name='com.crashlytics.android.internal']/class[@name='u']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.crashlytics.android.internal']/class[@name='p']" name="obfuscated">false</attr>
 </metadata>
