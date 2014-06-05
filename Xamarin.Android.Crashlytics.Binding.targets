@@ -1,16 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <CrashlyticsVersion>1.1.11.4</CrashlyticsVersion>
+    <CrashlyticsVersion>1.1.11.5</CrashlyticsVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$(MSBuildProjectDirectory)\..\</SolutionDir>
     <JarPath Condition="Exists('$(SolutionDir)\\packages')">$(SolutionDir)\packages\Xamarin.Android.Crashlytics.Binding.$(CrashlyticsVersion)\build\crashlytics-devtools.jar</JarPath>
     <JarPath Condition="Exists('$(MSBuildProjectDirectory)\\packages')">$(MSBuildProjectDirectory)\packages\Xamarin.Android.Crashlytics.Binding.$(CrashlyticsVersion)\build\crashlytics-devtools.jar</JarPath>
   </PropertyGroup>
-    
   <Target Name="CrashlyticsUploadDist" DependsOnTargets="SignAndroidPackage;" Condition="'$(CrashlyticsBetaAPK)' != ''">
     <Exec Command="java -jar $(JarPath) -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidAssets $(MSBuildProjectDirectory)\Assets -androidRes $(MSBuildProjectDirectory)\Resources -properties $(MSBuildProjectDirectory)\crashlytics.properties -projectPath $(MSBuildProjectDirectory) -uploadDist $(CrashlyticsBetaAPK)" />
   </Target>
-  
   <PropertyGroup Condition="'$(AndroidApplication)' != ''">
     <BuildDependsOn>
 		CrashlyticsCleanUp;
@@ -30,7 +28,7 @@
   </Target>
   <Target Name="CrashlyticsGenerateResourceFile">
     <Exec Command="java -jar $(JarPath) -androidManifest $(MSBuildProjectDirectory)\Properties\AndroidManifest.xml -androidAssets $(MSBuildProjectDirectory)\Assets -androidRes $(MSBuildProjectDirectory)\Resources -properties $(MSBuildProjectDirectory)\crashlytics.properties -projectPath $(MSBuildProjectDirectory) -generateResourceFile -tool com.crashlytics.tools.ant -version 1.5.0" />
-  </Target>  
+  </Target>
   <Target Name="CrashlyticsStoreDeobs">
   </Target>
 </Project>
