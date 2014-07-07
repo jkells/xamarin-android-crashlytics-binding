@@ -1,6 +1,7 @@
 packages/
 AntPlugin/
 META-INF/
+ThirdParty/
 bin
 obj
 *.class
