@@ -10,3 +10,4 @@ obj
 crashlytics.zip
 crashlytics-devtools.zip
 com_crashlytics_export_strings.xml
+default.local.ps1
