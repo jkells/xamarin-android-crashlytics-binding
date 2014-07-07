@@ -8,8 +8,10 @@ This project provides bindings for the Crashlytics library. You need to set your
 
 ## LICENSE ##
 
-This binding project is released under the MIT license.
-The license only covers **this binding project** which produces Xamarin Android bindings for Crashlytics.
+This project is released under the MIT license.
+
+**The license only covers the bindings in this project.**
+Your usage of the Crashlytics SDK will be bound by yousr agreement with Crashlytics. Their terms can be found here: http://try.crashlytics.com/terms/
 
 ---
 
