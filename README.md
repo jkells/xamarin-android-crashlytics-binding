@@ -11,12 +11,13 @@ This project provides bindings for the Crashlytics library. You need to set your
 This project is released under the MIT license.
 
 **The license only covers the bindings in this project.**
-Your usage of the Crashlytics SDK will be bound by yousr agreement with Crashlytics. Their terms can be found here: http://try.crashlytics.com/terms/
+Your usage of the Crashlytics SDK will be bound by your agreement with Crashlytics. Their terms can be found here: http://try.crashlytics.com/terms/
 
 ---
 
 ## Getting Started ##
 * **Place crashlytics.jar and crashlytics-devtools.jar into the ThirdParty directory**
+* **Make sure the javac.exe in your path is the same version used by Xamarin Android. Currently 1.6**
 * **Build the project by running psake.cmd**
 * **Install the nuget package into your project**
 
