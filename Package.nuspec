@@ -1,21 +1,19 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>Xamarin.Android.Crashlytics.Binding</id>
-    <version>1.1.11.6</version>
-    <authors>Crashlytics</authors>
+    <id>Fabric.Beta.Uploader</id>
+    <version>1.20.1</version>
+    <authors>Fabric</authors>
     <owners>Jared Kells</owners>
-    <licenseUrl>https://crashlytics.com</licenseUrl>
-    <projectUrl>https://crashlytics.com</projectUrl>
+    <licenseUrl>https://fabric.io</licenseUrl>
+    <projectUrl>https://fabric.io</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Xamarin Android bindings for Crashlytics</description>
-    <copyright>Copyright 2013</copyright>
+    <description>Fabric beta uploader</description>
+    <copyright>Copyright 2016</copyright>
     <tags>android</tags>
   </metadata>
   <files>
-    <file src="Xamarin.Android.Crashlytics.Binding.targets" target="build" />
-    <file src="Xamarin.Android.Crashlytics.Binding\bin\Release\Xamarin.Android.Crashlytics.dll" target="lib\MonoAndroid" />
-    <file src="Xamarin.Android.Crashlytics.Binding\bin\Release\Xamarin.Android.Crashlytics.pdb" target="lib\MonoAndroid" />
+    <file src="Fabric.Beta.Uploader.targets" target="build" />
     <file src="AntPlugin\crashlytics_build.xml" target="build" />
     <file src="AntPlugin\crashlytics_build_base.xml" target="build" />
     <file src="AntPlugin\crashlytics-devtools.jar" target="build" />
