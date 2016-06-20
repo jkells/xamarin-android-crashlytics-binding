@@ -3,11 +3,11 @@
   <PropertyGroup>
     <CrashlyticsDevToolsVersion>1.20.1</CrashlyticsDevToolsVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$(MSBuildProjectDirectory)\..\</SolutionDir>
-    <JarPath Condition="Exists('$(SolutionDir)\\packages')">$(SolutionDir)\packages\Xamarin.Android.Crashlytics.Binding.$(CrashlyticsDevToolsVersion)\build\crashlytics-devtools.jar</JarPath>
-    <JarPath Condition="Exists('$(MSBuildProjectDirectory)\\packages')">$(MSBuildProjectDirectory)\packages\Xamarin.Android.Crashlytics.Binding.$(CrashlyticsDevToolsVersion)\build\crashlytics-devtools.jar</JarPath>
+    <JarPath Condition="Exists('$(SolutionDir)\\packages')">$(SolutionDir)\packages\Fabric.Beta.Uploader.$(CrashlyticsDevToolsVersion)\build\crashlytics-devtools.jar</JarPath>
+    <JarPath Condition="Exists('$(MSBuildProjectDirectory)\\packages')">$(MSBuildProjectDirectory)\packages\Fabric.Beta.Uploader.$(CrashlyticsDevToolsVersion)\build\crashlytics-devtools.jar</JarPath>
   </PropertyGroup>
   <Target Name="CrashlyticsUploadDist" DependsOnTargets="SignAndroidPackage;" Condition="'$(CrashlyticsBetaAPK)' != ''">
-    <Exec Command="java -jar &quot;$(JarPath)&quot; -androidManifest &quot;$(MSBuildProjectDirectory)\Properties\AndroidManifest.xml&quot; -androidAssets &quot;$(MSBuildProjectDirectory)\Assets&quot; -androidRes &quot;$(MSBuildProjectDirectory)\Resources&quot; -properties &quot;$(MSBuildProjectDirectory)\crashlytics.properties&quot; -projectPath &quot;$(MSBuildProjectDirectory)&quot; -uploadDist &quot;$(CrashlyticsBetaAPK)&quot;" />
+    <Exec Command="java -jar &quot;$(JarPath)&quot; -androidManifest &quot;$(MSBuildProjectDirectory)\Properties\AndroidManifest.xml&quot; -androidAssets &quot;$(MSBuildProjectDirectory)\Assets&quot; -androidRes &quot;$(MSBuildProjectDirectory)\Resources&quot; -properties &quot;$(MSBuildProjectDirectory)\fabric.properties&quot; -projectPath &quot;$(MSBuildProjectDirectory)&quot; -uploadDist &quot;$(CrashlyticsBetaAPK)&quot;" />
   </Target>
   <PropertyGroup Condition="'$(AndroidApplication)' != ''">
     <BuildDependsOn>
@@ -21,13 +21,13 @@
 	  </BuildDependsOn>
   </PropertyGroup>
   <Target Name="CrashlyticsCleanUp">
-    <Exec Command="java -jar &quot;$(JarPath)&quot; -androidManifest &quot;$(MSBuildProjectDirectory)\Properties\AndroidManifest.xml&quot; -androidAssets &quot;$(MSBuildProjectDirectory)\Assets&quot; -androidRes &quot;$(MSBuildProjectDirectory)\Resources&quot; -properties &quot;$(MSBuildProjectDirectory)\crashlytics.properties&quot; -projectPath &quot;$(MSBuildProjectDirectory)&quot; -cleanupResourceFile" />
+    <Exec Command="java -jar &quot;$(JarPath)&quot; -androidManifest &quot;$(MSBuildProjectDirectory)\Properties\AndroidManifest.xml&quot; -androidAssets &quot;$(MSBuildProjectDirectory)\Assets&quot; -androidRes &quot;$(MSBuildProjectDirectory)\Resources&quot; -properties &quot;$(MSBuildProjectDirectory)\fabric.properties&quot; -projectPath &quot;$(MSBuildProjectDirectory)&quot; -cleanupResourceFile" />
   </Target>
   <Target Name="CrashlyticsUploadDeobs">
-    <Exec Command="java -jar &quot;$(JarPath)&quot; -androidManifest &quot;$(MSBuildProjectDirectory)\Properties\AndroidManifest.xml&quot; -androidAssets &quot;$(MSBuildProjectDirectory)\Assets&quot; -androidRes &quot;$(MSBuildProjectDirectory)\Resources&quot; -properties &quot;$(MSBuildProjectDirectory)\crashlytics.properties&quot; -projectPath &quot;$(MSBuildProjectDirectory)&quot; -uploadDeobs" />
+    <Exec Command="java -jar &quot;$(JarPath)&quot; -androidManifest &quot;$(MSBuildProjectDirectory)\Properties\AndroidManifest.xml&quot; -androidAssets &quot;$(MSBuildProjectDirectory)\Assets&quot; -androidRes &quot;$(MSBuildProjectDirectory)\Resources&quot; -properties &quot;$(MSBuildProjectDirectory)\fabric.properties&quot; -projectPath &quot;$(MSBuildProjectDirectory)&quot; -uploadDeobs" />
   </Target>
   <Target Name="CrashlyticsGenerateResourceFile">
-    <Exec Command="java -jar &quot;$(JarPath)&quot; -androidManifest &quot;$(MSBuildProjectDirectory)\Properties\AndroidManifest.xml&quot; -androidAssets &quot;$(MSBuildProjectDirectory)\Assets&quot; -androidRes &quot;$(MSBuildProjectDirectory)\Resources&quot; -properties &quot;$(MSBuildProjectDirectory)\crashlytics.properties&quot; -projectPath &quot;$(MSBuildProjectDirectory)&quot; -generateResourceFile -tool com.crashlytics.tools.ant -version $(CrashlyticsDevToolsVersion)" />
+    <Exec Command="java -jar &quot;$(JarPath)&quot; -androidManifest &quot;$(MSBuildProjectDirectory)\Properties\AndroidManifest.xml&quot; -androidAssets &quot;$(MSBuildProjectDirectory)\Assets&quot; -androidRes &quot;$(MSBuildProjectDirectory)\Resources&quot; -properties &quot;$(MSBuildProjectDirectory)\fabric.properties&quot; -projectPath &quot;$(MSBuildProjectDirectory)&quot; -generateResourceFile -tool com.crashlytics.tools.ant -version $(CrashlyticsDevToolsVersion)" />
   </Target>
   <Target Name="CrashlyticsStoreDeobs">
   </Target>
