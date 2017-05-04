@@ -2,14 +2,14 @@
 <package>
   <metadata>
     <id>Fabric.Beta.Uploader</id>
-    <version>1.20.2.1002</version>
+    <version>1.20.2.1003</version>
     <authors>Fabric</authors>
     <owners>Jared Kells</owners>
     <licenseUrl>https://fabric.io</licenseUrl>
     <projectUrl>https://fabric.io</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Fabric beta uploader</description>
-    <copyright>Copyright 2016</copyright>
+    <copyright>Copyright 2017</copyright>
     <tags>android</tags>
   </metadata>
   <files>

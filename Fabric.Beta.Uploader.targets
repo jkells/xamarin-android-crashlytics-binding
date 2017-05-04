@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <CrashlyticsDevToolsVersion>1.20.2.1002</CrashlyticsDevToolsVersion>
+    <BindingVersion>1.20.2.1003</BindingVersion>
+    <CrashlyticsDevToolsVersion>1.20.2</CrashlyticsDevToolsVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$(MSBuildProjectDirectory)\..\</SolutionDir>
-    <JarPath Condition="Exists('$(SolutionDir)\\packages')">$(SolutionDir)\packages\Fabric.Beta.Uploader.$(CrashlyticsDevToolsVersion)\build\crashlytics-devtools.jar</JarPath>
-    <JarPath Condition="Exists('$(MSBuildProjectDirectory)\\packages')">$(MSBuildProjectDirectory)\packages\Fabric.Beta.Uploader.$(CrashlyticsDevToolsVersion)\build\crashlytics-devtools.jar</JarPath>
+    <JarPath Condition="Exists('$(SolutionDir)\\packages')">$(SolutionDir)\packages\Fabric.Beta.Uploader.$(BindingVersion)\build\crashlytics-devtools.jar</JarPath>
+    <JarPath Condition="Exists('$(MSBuildProjectDirectory)\\packages')">$(MSBuildProjectDirectory)\packages\Fabric.Beta.Uploader.$(BindingVersion)\build\crashlytics-devtools.jar</JarPath>
   </PropertyGroup>
   <Target Name="CrashlyticsUploadDistTargets">
     <PropertyGroup>
